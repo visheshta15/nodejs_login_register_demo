@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+</head>
+<body style="display: grid;
+    place-items: center; 
+     width: 100vw;  ">
+     {{>nav}}
+    <h6>Registration Form</h6>
+    <div style="display: flex;
+    align-items: center; justify-content:center;  height: 70vh">
+    <form action="/registration" method="POST" style="width: 60vw;">
+        <div class="row md-12 mb-4">
+            <div class="form-group col-md-6">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" placeholder="first name*" name="firstName" value="">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" placeholder="last name*" name="lastName" value="">
+            </div>
+        </div>
+
+        <div class="row mb-4" >
+            <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="email"  class="form-control"  placeholder="Your email*" name="email" value="">
+            </div>
+            <div class="form-group col-md-6 mt-4">
+                <label class="radio inline">
+                    <input class="form-check-input" type="radio" name="gender"  value="" checked>
+                    <span>Female</span>
+                </label>
+                <label class="radio inline">
+                    <input class="form-check-input" type="radio" name="gender"  value="" >
+                    <span>Male</span>
+                </label>
+            </div>
+            
+      </div>
+
+        <div class="row mb-4">
+            <div class="form-group col-md-6">
+                <label for="phone">Phone NO</label>
+                <input type="text" minlength="10" maxlength="10" min="1000000000" max="9999999999" class="form-control" placeholder="Your Phone no" name="phone" value="">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="age">Age</label>
+                <input type="text" class="form-control" placeholder="Enter your age" name="age" value="">
+            </div>
+        </div>
+    
+        <div class="row mb-4">
+            <div class="form-group col-md-6">
+                <label for="pwd">Password</label>
+                <input type="password" class="form-control" placeholder="password*" name="pwd" value="">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="confirmPwd">Confirm Password</label>
+                <input type="password" class="form-control" placeholder="password*" name="confirmPwd" value="">
+            </div>
+            
+        </div>
+             
+        <button type="submit" class="btn btn-primary"  style="width: 60vw;"value="Register">Submit to Register</button>
+    </form>
+    </div>
+</body>
+</html>

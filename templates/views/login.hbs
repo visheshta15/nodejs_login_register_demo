@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+</head>
+<body style="display: grid;
+    place-items: center; 
+     width: 100vw;  ">
+    {{>nav}}
+    <h6>Login Form</h6>
+    <div style="display: flex;
+    align-items: center; justify-content:center;  ">
+        <form action="/login" method="POST" style="width: 50vw;">
+            <div class="row  mt-4 mb-4" >
+                <div class="form-group">
+                    <label for="email">Email id</label>
+                    <input type="email" class="form-control" placeholder="Email" name="email" value="" required>
+                </div>
+            </div>
+            <div class="row  mb-4">
+                <div class="form-group ">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" placeholder="Password" name="password" value="" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 50vw;" value="">Sign In</button>
+        </form>
+    </div>
+
+</body>
+</html>
